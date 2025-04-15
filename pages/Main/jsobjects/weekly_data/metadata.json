@@ -9,7 +9,7 @@
     "variables": [
       {
         "name": "daily_data",
-        "value": "GetWorkers.data.list"
+        "value": "weekly_data.get_data()"
       },
       {
         "name": "draft_weekly_data",

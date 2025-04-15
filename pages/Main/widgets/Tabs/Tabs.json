@@ -159,6 +159,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTabSelected"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onTabSelected"
@@ -178,7 +183,7 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 133,
   "needsErrorInfo": false,
-  "onTabSelected": "{{Api1.run()}}",
+  "onTabSelected": "{{GetWorkers.run()}}",
   "originalBottomRow": 145,
   "originalTopRow": 75,
   "parentColumnSpace": 19.8125,
