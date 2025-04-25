@@ -22,12 +22,12 @@ export default {
 			};
 			dataset_source.push(date_data);
 		}
-		// console.log(company_series);
-		
-		const eChart_Configuration = {
-			"dataset": {
-				"source": dataset_source
-			},
+		const daily_options = this.echart_bar_options(dataset_source, "Nitto daily man power", company_series);
+		return daily_options;
+	},
+	
+	echart_bar_options: (dataset=[], title="", series=[]) =>  ({
+			"dataset": {"source": dataset},
 			"tooltip": {
 				"trigger": "axis",
 				"axisPointer": {
@@ -35,7 +35,7 @@ export default {
 				}
 			},
 			"title": {
-				"text": "Nitto daily man power",
+				"text": title,
 				"left": "center",
 				"textStyle": {
 					"width": 200,
@@ -53,21 +53,12 @@ export default {
 				"top": 100,
 				"containLabel": true
 			},
-			"xAxis": [
-				{
-					"type": "category"
-				}
-			],
-			"yAxis": [
-				{
-					"type": "value"
-				}
-			],
-			"series":company_series.map(() => ({
+			"xAxis": [{"type": "category"}],
+			"yAxis": [{"type": "value"}],
+			"series":series.map(() => ({
 				"type": "bar",
 				"stack": "workers"
-			}))
-		};
-		return eChart_Configuration;
-	},	
+			})),
+			"color": ["#14532d", "#15803d", "#22c55e", "#86efac", "#dcfce7"]  //will rotate between these colors
+		}),
 }

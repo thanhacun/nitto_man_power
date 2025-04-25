@@ -184,7 +184,7 @@
   "mobileTopRow": 133,
   "needsErrorInfo": false,
   "onTabSelected": "{{GetWorkers.run()}}",
-  "originalBottomRow": 182,
+  "originalBottomRow": 178,
   "originalTopRow": 112,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
