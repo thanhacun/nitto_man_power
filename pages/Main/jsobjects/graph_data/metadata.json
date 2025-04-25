@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "67ecb5acb015e04df512d057_4f89bba9-3d8d-4c11-a055-0dfdaa89a2a1",
+  "id": "Main_graph_data",
+  "unpublishedCollection": {
+    "name": "graph_data",
+    "pageId": "Main",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "daily_data",
+        "value": "graph_data.get_data()"
+      },
+      {
+        "name": "draft_weekly_data",
+        "value": "graph_data.daily_data.map(e => ({\n  week: e.Year + \"-\" + e.Month + \"-W\" + e.Week,\n  workers: graph_data.daily_data.filter(d => d.Year === e.Year && d.Month === e.Month && d.Week === e.Week).map(e1 => e1.Workers).reduce((a, c) => a + c)\n}))"
+      },
+      {
+        "name": "weekly_data",
+        "value": "graph_data.draft_weekly_data.filter((e, index, self) => index === self.findIndex(t => t.week === e.week))"
+      }
+    ]
+  }
+}

@@ -172,7 +172,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "searchKey": "",
-  "tableData": "{{weekly_data.weekly_data}}",
+  "tableData": "{{graph_data.weekly_data}}",
   "textSize": "0.875rem",
   "topRow": 2,
   "totalRecordsCount": 0,
