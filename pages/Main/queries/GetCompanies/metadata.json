@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "67ecb5acb015e04df512d057_486bb686-c635-40f3-b9ab-a5aa451b77e6",
-  "id": "Main_GetWorkers",
+  "gitSyncId": "67f9eefa4c69b77e32ee8ccb_0f377ff9-443d-4504-be96-01ce6837dfe2",
+  "id": "Main_GetCompanies",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -16,7 +16,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "m95oemixqlko2hi/records",
+      "path": "m600a0uqwcavxgv/records",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -29,7 +29,7 @@
         },
         {
           "key": "limit",
-          "value": "999"
+          "value": "25"
         },
         {
           "key": "where",
@@ -37,7 +37,7 @@
         },
         {
           "key": "viewId",
-          "value": "vw686is5457axv84"
+          "value": "vw3h5l0xzgphhm52"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -51,8 +51,8 @@
     },
     "dynamicBindingPathList": [],
     "executeOnLoad": true,
-    "name": "GetWorkers",
+    "name": "GetCompanies",
     "pageId": "Main",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }

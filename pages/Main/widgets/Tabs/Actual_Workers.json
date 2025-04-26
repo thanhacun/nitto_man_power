@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 64,
+  "bottomRow": 71,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -100,9 +100,6 @@
       "key": "primaryColumns.Sub_Contractors.computedValue"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.Tasks.computedValue"
     },
     {
@@ -122,6 +119,9 @@
     },
     {
       "key": "primaryColumns._nc_m2m_Actual_Works.computedValue"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -150,8 +150,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 159,
-  "originalTopRow": 107,
+  "originalBottomRow": 81,
+  "originalTopRow": 20,
   "parentId": "wf5ko0bexe",
   "parentRowSpace": 10,
   "primaryColumnId": "Id",
@@ -707,9 +707,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 43,
   "searchKey": "",
-  "tableData": "{{GetWorkers.data.list}}",
+  "tableData": "{{GetWorkers.data.list.filter(e => DatePicker1.formattedDate ? DatePicker1.formattedDate == e.Date : true && MultiSelect1.selectedOptionValues.length != 0 ? MultiSelect1.selectedOptionValues.includes(e['Sub-Contractors'].Id) : true)}}",
   "textSize": "0.875rem",
-  "topRow": 2,
+  "topRow": 10,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

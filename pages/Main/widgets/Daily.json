@@ -4,6 +4,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 74,
+  "bottomRowBeforeCollapse": 74,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "bob1sv41r6": {
@@ -96,6 +97,8 @@
   "mobileRightColumn": 14,
   "mobileTopRow": 57,
   "needsErrorInfo": true,
+  "originalBottomRow": 74,
+  "originalTopRow": 39,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -105,6 +108,7 @@
   "setAdaptiveYMin": false,
   "showDataPointLabel": false,
   "topRow": 39,
+  "topRowBeforeCollapse": 39,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "coim3rgnng",

@@ -13,7 +13,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( graph_data.graph_daily_data()))(DailyChart.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \ngraph_data.graph_daily_data()\n))(DailyChart.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {

@@ -11,13 +11,13 @@ export default {
 	
 	graph_daily_data: () => {
 		// return daily data grouping by sub-contractor and date
-		const date_series = [...new Set(this.daily_data.map(r => r.Date))];
-		const company_series = [...new Set(this.daily_data.map(r => r.Company))];
+		const date_series = [...new Set(Actual_Workers.tableData.map(r => r.Date))];
+		const company_series = [...new Set(Actual_Workers.tableData.map(r => r.Company))];
 		let dataset_source = [["Date"].concat(company_series)];
 		for (let date of date_series) {
 			let date_data = [date];
 			for (let company of company_series) {
-				let company_workers = this.daily_data.filter(r => r.Date == date && r.Company == company).map(f => f.Workers).reduce((a, v) => (a + v), 0);
+				let company_workers = Actual_Workers.tableData.filter(r => r.Date == date && r.Company == company).map(f => f.Workers).reduce((a, v) => (a + v), 0);
 				date_data.push(company_workers|| 0);
 			};
 			dataset_source.push(date_data);
