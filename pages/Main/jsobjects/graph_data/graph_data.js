@@ -13,8 +13,9 @@ export default {
 	
 	filter: (r) => {
 		const date_filter = DatePicker1.formattedDate ? r.Date == DatePicker1.formattedDate : true;
-		const company_filter = CompanySelect.selectedOptionValues.length ? CompanySelect.selectedOptionValues.includes(r["Sub-Contractors_id"]) : true;
-		const job_filter = JobSelect.selectedOptionValues.length ? this.getCommonElement(r._nc_m2m_Actual_Works.map(o => o.Works_id), JobSelect.selectedOptionValues).length : true;
+		const company_filter = ContractorSelect.selectedOptionValues.length ? ContractorSelect.selectedOptionValues.includes(r["Sub-Contractors_id"]) : true;
+		const job_filter = TaskSelect.selectedOptionValues.length ? this.getCommonElement(r._nc_m2m_Actual_Works.map(o => o.Works_id), TaskSelect.selectedOptionValues).length : true;
+		// console.log(date_filter, company_filter, job_filter);
 		return date_filter && company_filter && job_filter;
 	},
 	

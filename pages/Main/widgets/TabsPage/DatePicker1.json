@@ -4,64 +4,54 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 8,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "closeOnSelection": true,
+  "dateFormat": "YYYY-MM-DD",
+  "datePickerType": "DATE_PICKER",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "sourceData"
-    }
-  ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onOptionChange"
-    }
-  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": "0",
   "isDisabled": false,
-  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "gffxtfguvo",
+  "key": "jw9g5lv5rv",
+  "label": "Date",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Sub Contractors",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 14,
+  "leftColumn": 1,
+  "maxDate": "2025-12-31T01:29:00.000+07:00",
   "maxDynamicHeight": 9000,
+  "minDate": "2024-12-01T01:30:00.000+07:00",
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 14,
-  "mobileLeftColumn": 26,
-  "mobileRightColumn": 46,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onOptionChange": "",
-  "optionLabel": "Name",
-  "optionValue": "Id",
+  "originalBottomRow": 14,
+  "originalTopRow": 7,
   "parentColumnSpace": 8.086181640625,
-  "parentId": "wf5ko0bexe",
+  "parentId": "93qv8lr8lq",
   "parentRowSpace": 10,
-  "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
-  "serverSideFiltering": false,
-  "sourceData": "{{GetCompanies.data.list}}",
+  "rightColumn": 9,
+  "shortcuts": false,
+  "timePrecision": "None",
   "topRow": 1,
-  "type": "MULTI_SELECT_WIDGET_V2",
-  "version": 1,
-  "widgetId": "02a387ts3s",
-  "widgetName": "CompanySelect"
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "6w8fg514x9",
+  "widgetName": "DatePicker1"
 }
