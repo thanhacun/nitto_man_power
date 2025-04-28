@@ -7,13 +7,13 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "sqjgq2gcmx": {
-      "data": "{{Actual_Workers.tableData.map(e => ( {x:e.Date, y: [e.Workers, 10], z: e.Company }))}}",
+      "data": "",
       "seriesName": "Test"
     }
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \ngraph_data.graph_daily_data()\n))(DailyChart.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( graph_data.graph_daily_data()))(DailyChart.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -73,9 +73,6 @@
     },
     {
       "key": "fontFamily"
-    },
-    {
-      "key": "chartData.sqjgq2gcmx.data"
     },
     {
       "key": "customEChartConfig"

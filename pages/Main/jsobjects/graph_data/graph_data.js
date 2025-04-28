@@ -15,12 +15,9 @@ export default {
 		const date_filter = DatePicker1.formattedDate ? r.Date == DatePicker1.formattedDate : true;
 		const company_filter = CompanySelect.selectedOptionValues.length ? CompanySelect.selectedOptionValues.includes(r["Sub-Contractors_id"]) : true;
 		const job_filter = JobSelect.selectedOptionValues.length ? this.getCommonElement(r._nc_m2m_Actual_Works.map(o => o.Works_id), JobSelect.selectedOptionValues).length : true;
-		console.log(date_filter, company_filter, job_filter);
 		return date_filter && company_filter && job_filter;
 	},
 	
-	// daily_data_filter: this.daily_data.filter(r => this.filter(r)),
-
 	draft_weekly_data: this.daily_data.map(e=>({
 		week: e.Year + "-" + e.Month + "-W" + e.Week,
 		workers: this.daily_data.filter(d => (d.Year === e.Year && d.Month === e.Month && d.Week === e.Week)).map(e1 => e1.Workers).reduce( (a, c) => (a + c))
@@ -42,6 +39,7 @@ export default {
 			dataset_source.push(date_data);
 		}
 		const daily_options = this.echart_bar_options(dataset_source, "Nitto daily man power", company_series);
+		// console.log(daily_options);
 		return daily_options;
 	},
 	
