@@ -1,6 +1,25 @@
 export default {
-	get_data: () => GetWorkers.data.list,
-	daily_data: this.get_data(),
+	get_data() {
+		return GetWorkers.data.list.filter(r => this.filter(r));
+	},
+	
+	daily_data: this.get_data().map(r => ({...r, Works: GetJobs.data.list.filter(j => r._nc_m2m_Actual_Works.map(o => o.Works_id).includes(j.Id)).map(f => f.Job)})),
+	
+	getCommonElement: (arr1, arr2) => {
+		// return common items of 2 arrays (chatGPT)
+		const set1 = new Set(arr1);
+		return arr2.filter(item => set1.has(item));
+	},
+	
+	filter: (r) => {
+		const date_filter = DatePicker1.formattedDate ? r.Date == DatePicker1.formattedDate : true;
+		const company_filter = CompanySelect.selectedOptionValues.length ? CompanySelect.selectedOptionValues.includes(r["Sub-Contractors_id"]) : true;
+		const job_filter = JobSelect.selectedOptionValues.length ? this.getCommonElement(r._nc_m2m_Actual_Works.map(o => o.Works_id), JobSelect.selectedOptionValues).length : true;
+		console.log(date_filter, company_filter, job_filter);
+		return date_filter && company_filter && job_filter;
+	},
+	
+	// daily_data_filter: this.daily_data.filter(r => this.filter(r)),
 
 	draft_weekly_data: this.daily_data.map(e=>({
 		week: e.Year + "-" + e.Month + "-W" + e.Week,

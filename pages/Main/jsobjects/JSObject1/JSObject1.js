@@ -1,9 +1,12 @@
 export default {
-	MultiSelect1onOptionChange () {
+	myVar1: [],
+	myVar2: {},
+	myFun1 () {
 		//	write code here
-		console.log(MultiSelect1.selectedOptionLabels);
-		const test1 = [1]
-		const test = GetWorkers.data.list.filter(e => DatePicker1.formattedDate ? DatePicker1.formattedDate == e.Date : true && MultiSelect1.selectedOptionValues.length != 0 ? MultiSelect1.selectedOptionValues.includes(e['Sub-Contractors'].Id) : true);
-		console.log(test);
+		//	this.myVar1 = [1,2,3]
+	},
+	async myFun2 () {
+		//	use async-await or promises
+		//	await storeValue('varName', 'hello world')
 	}
 }
