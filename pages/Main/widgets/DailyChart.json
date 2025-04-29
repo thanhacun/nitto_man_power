@@ -8,10 +8,10 @@
   "chartData": {
     "sqjgq2gcmx": {
       "data": "",
-      "seriesName": "Test"
+      "seriesName": ""
     }
   },
-  "chartName": "Sales Report",
+  "chartName": "",
   "chartType": "CUSTOM_ECHART",
   "customEChartConfig": "{{ ((chartType) => ( graph_data.graph_daily_data()))(DailyChart.chartType) }}",
   "customFusionChartConfig": {
@@ -107,6 +107,6 @@
   "version": 1,
   "widgetId": "64x9rqlfdu",
   "widgetName": "DailyChart",
-  "xAxisName": "Product Line",
-  "yAxisName": "Revenue($)"
+  "xAxisName": "",
+  "yAxisName": ""
 }
