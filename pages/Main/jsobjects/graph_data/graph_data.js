@@ -45,14 +45,23 @@ export default {
 	},
 	
 	graph_weekly_data: () => {
-		const week_series = this.weekly_data.map(r => r.week);
+		// const week_series = this.weekly_data.map(r => r.week);
 		let dataset_source = [['Week', 'Man Power', 'Man Power (line)']].concat(this.weekly_data.map(r => [r.week, r.workers, r.workers]));
 		const weekly_options = this.echart_bar_options(dataset_source, "Nitto weekly man power", ['Man Power']);
 		weekly_options.series.push({
 			type: 'line',
 			stack: 'workers'
 		});
-		weekly_options.legend.data = ['Man Power']
+		weekly_options.legend.data = ['Man Power'];
+		weekly_options.tooltip.formatter = (params) => {
+			let result = params[0].axisValue + "<br/>";
+      params.forEach(function(item){
+        if (item.seriesName === 'Man Power') {
+          result += item.seriesName + ': ' + item.value[1] + '<br/>';
+        }
+      })
+      return result;
+		}
 		return weekly_options;
 	},
 	
