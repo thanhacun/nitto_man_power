@@ -44,6 +44,18 @@ export default {
 		return daily_options;
 	},
 	
+	graph_weekly_data: () => {
+		const week_series = this.weekly_data.map(r => r.week);
+		let dataset_source = [['Week', 'Man Power', 'Man Power (line)']].concat(this.weekly_data.map(r => [r.week, r.workers, r.workers]));
+		const weekly_options = this.echart_bar_options(dataset_source, "Nitto weekly man power", ['Man Power']);
+		weekly_options.series.push({
+			type: 'line',
+			stack: 'workers'
+		});
+		weekly_options.legend.data = ['Man Power']
+		return weekly_options;
+	},
+	
 	echart_bar_options: (dataset=[], title="", series=[]) =>  ({
 			"dataset": {"source": dataset},
 			"tooltip": {
@@ -56,7 +68,7 @@ export default {
 				"text": title,
 				"left": "center",
 				"textStyle": {
-					"width": 200,
+					"width": 400,
 					"overflow": "truncate"
 				}
 			},
@@ -72,7 +84,7 @@ export default {
 				"containLabel": true
 			},
 			"xAxis": [{"type": "category"}],
-			"yAxis": [{"type": "value"}],
+			"yAxis": [{"type": "value", "name": "Person"}],
 			"series":series.map(() => ({
 				"type": "bar",
 				"stack": "workers"
