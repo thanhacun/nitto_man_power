@@ -39,17 +39,16 @@
     "Year",
     "Month",
     "Week",
-    "Sub_Contractors",
-    "Tasks",
     "Jobs",
-    "Sub_Contractors_id",
     "Works_id",
     "CreatedAt",
     "UpdatedAt",
     "_nc_m2m_Actual_Works",
-    "Works"
+    "Works",
+    "Sub_Contractors_id1",
+    "Sub_Contractors1"
   ],
-  "columnUpdatedAt": 1745823292892,
+  "columnUpdatedAt": 1750936802906,
   "columnWidthMap": {
     "Note": 100,
     "Workers": 122,
@@ -99,16 +98,7 @@
       "key": "primaryColumns.Week.computedValue"
     },
     {
-      "key": "primaryColumns.Sub_Contractors.computedValue"
-    },
-    {
-      "key": "primaryColumns.Tasks.computedValue"
-    },
-    {
       "key": "primaryColumns.Jobs.computedValue"
-    },
-    {
-      "key": "primaryColumns.Sub_Contractors_id.computedValue"
     },
     {
       "key": "primaryColumns.Works_id.computedValue"
@@ -127,6 +117,12 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.Sub_Contractors_id1.computedValue"
+    },
+    {
+      "key": "primaryColumns.Sub_Contractors1.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -401,21 +397,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "Sub_Contractors": {
-      "alias": "Sub-Contractors",
+    "Sub_Contractors1": {
+      "alias": "Sub Contractors",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Actual_Workers.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Sub-Contractors\"]))}}",
+      "computedValue": "{{Actual_Workers.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Sub Contractors\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "Sub_Contractors",
-      "index": 10,
+      "id": "Sub_Contractors1",
+      "index": 12,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -424,9 +420,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "Sub-Contractors",
+      "label": "Sub Contractors",
       "notation": "standard",
-      "originalId": "Sub-Contractors",
+      "originalId": "Sub Contractors",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -435,54 +431,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "Sub_Contractors_id": {
-      "alias": "Sub-Contractors_id",
+    "Sub_Contractors_id1": {
+      "alias": "Sub Contractors_id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Actual_Workers.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Sub-Contractors_id\"]))}}",
+      "computedValue": "{{Actual_Workers.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Sub Contractors_id\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "Sub_Contractors_id",
-      "index": 3,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "Sub-Contractors_id",
-      "notation": "standard",
-      "originalId": "Sub-Contractors_id",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "Tasks": {
-      "alias": "Tasks",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Actual_Workers.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Tasks\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "Tasks",
+      "id": "Sub_Contractors_id1",
       "index": 9,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -492,9 +454,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "Tasks",
+      "label": "Sub Contractors_id",
       "notation": "standard",
-      "originalId": "Tasks",
+      "originalId": "Sub Contractors_id",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

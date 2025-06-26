@@ -9,7 +9,7 @@
     "variables": [
       {
         "name": "daily_data",
-        "value": "graph_data.get_data().map(r => ({\n  ...r,\n  Works: GetJobs.data.list.filter(j => r._nc_m2m_Actual_Works.map(o => o.Works_id).includes(j.Id)).map(f => f.Job)\n}))"
+        "value": "graph_data.get_data().map(r => ({\n  ...r,\n  Works: GetNittoJobs.data.list.filter(j => r._nc_m2m_Actual_Works.map(o => o.Works_id).includes(j.Id)).map(f => f.Job)\n}))"
       },
       {
         "name": "draft_weekly_data",

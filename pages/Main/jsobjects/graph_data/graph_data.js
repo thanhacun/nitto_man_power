@@ -1,9 +1,14 @@
 export default {
 	get_data() {
-		return GetWorkers.data.list.filter(r => this.filter(r));
+		// const result = OldGetWorkers.data.list.filter(r => this.filter(r));
+		// return OldGetWorkers.data.list.filter(r => this.filter(r));
+		return GetNittoWorkers.data.list.filter(r => this.filter(r));
+		// console.log(result);
+		// return result;
+		
 	},
 	
-	daily_data: this.get_data().map(r => ({...r, Works: GetJobs.data.list.filter(j => r._nc_m2m_Actual_Works.map(o => o.Works_id).includes(j.Id)).map(f => f.Job)})),
+	daily_data: this.get_data().map(r => ({...r, Works: GetNittoJobs.data.list.filter(j => r._nc_m2m_Actual_Works.map(o => o.Works_id).includes(j.Id)).map(f => f.Job)})),
 	
 	getCommonElement: (arr1, arr2) => {
 		// return common items of 2 arrays (chatGPT)
