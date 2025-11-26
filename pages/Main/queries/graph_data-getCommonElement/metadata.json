@@ -29,10 +29,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "graph_data.getCommonElement",
     "name": "getCommonElement",
     "pageId": "Main",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

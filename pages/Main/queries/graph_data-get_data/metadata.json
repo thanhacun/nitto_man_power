@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
     "fullyQualifiedName": "graph_data.get_data",
     "name": "get_data",
     "pageId": "Main",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }

@@ -50,9 +50,9 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
     "name": "GetNittoWorkers",
     "pageId": "Main",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }

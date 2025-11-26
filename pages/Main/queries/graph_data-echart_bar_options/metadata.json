@@ -35,10 +35,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "graph_data.echart_bar_options",
     "name": "echart_bar_options",
     "pageId": "Main",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
