@@ -16,7 +16,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "m10etauaol6m92r/records",
+      "path": "m1ckfvyyqfa1ozx/records",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -37,7 +37,7 @@
         },
         {
           "key": "viewId",
-          "value": "vw6pwwu1uk0sj8k8"
+          "value": "vw44tzpxkkzrtx4s"
         }
       ],
       "timeoutInMillisecond": 10000
